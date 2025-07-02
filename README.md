@@ -36,9 +36,12 @@ nxc smb 10.10.10.10 -u admin -p password123
 ### 🔧 Disable the wrapper (Exegol-history sync)
 
 ```bash
-# Set scrap = False to disable Exegol-history sync
 sed -i 's/scrap *= *True/scrap = False/' /root/.nxc/nxc.conf
 ```
+Or use alias :
+`disablenxcwrapper`
+`enablenxcwrapper`
+
 
 This keeps nxcwrap active but disables automatic credential/host syncing.
 
