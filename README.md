@@ -1,4 +1,3 @@
-```markdown
 # 🛠️ nxcwrap.py – NetExec Wrapper for Exegol-History
 
 ## Description
