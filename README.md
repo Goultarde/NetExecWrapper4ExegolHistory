@@ -11,16 +11,16 @@ After executing any `nxc` command, it will:
 - Add **host IPs and hostnames** to Exegol-History
 
 ---
+## Installation (my-ressources) :
+```bash
+echo 'curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/install_nxcwraper.sh | bash' >> ~/.exegol/my-resources/setup/load_user_setup.sh
+```
 
-## Installation (inside Exegol)
+## Installation (inside Exegol) :
 
 ```bash
 bash <(curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/install_nxcwraper.sh)
 
-```
-## Installation my-ressources :
-```bash
-echo 'curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/install_nxcwraper.sh | bash' >> ~/.exegol/my-resources/setup/load_user_setup.sh
 ```
 
 ## Demo :
