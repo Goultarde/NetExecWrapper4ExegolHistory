@@ -20,7 +20,7 @@ bash <(curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/m
 ```
 ## Installation my-ressources :
 ```bash
-echo 'bash <(curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/install_nxcwraper.sh)' >> ~/.exegol/my-resources/setup/load_user_setup.sh
+echo 'curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/install_nxcwraper.sh | bash' >> ~/.exegol/my-resources/setup/load_user_setup.sh
 ```
 
 ## Demo :
