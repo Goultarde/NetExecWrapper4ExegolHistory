@@ -6,8 +6,6 @@ pip install colorama >/dev/null 2>&1
 curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/nxcwrap.py -o /opt/tools/NetExec/nxc/nxcwrap.py
 chmod +x /opt/tools/NetExec/nxc/nxcwrap.py
 
-mkdir -p /root/.nxc
-
 CONF_PATH="/root/.nxc/nxc.conf"
 if ! grep -q "\[Exegol-History\]" "$CONF_PATH" 2>/dev/null; then
     echo -e "\n[Exegol-History]\nscrap = True" >> "$CONF_PATH"
