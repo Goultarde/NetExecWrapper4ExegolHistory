@@ -24,6 +24,11 @@ cp nxcwrap.py /opt/tools/NetExec/nxc/
 # Add persistent alias in Exegol shell
 echo 'alias nxc="python3 /opt/tools/NetExec/nxc/nxcwrap.py"' >> ~/.zshrc
 source ~/.zshrc
+
+Edit : /root/.nxc/nxc.conf and add :
+[Exegol-History]
+scrap = True
+
 ```
 
 ---
