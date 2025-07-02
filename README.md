@@ -15,22 +15,12 @@ After executing any `nxc` command, it will:
 ## Installation (inside Exegol)
 
 ```bash
-# Copy the wrapper into NetExec's directory
-cp nxcwrap.py /opt/tools/NetExec/nxc/
-
-# Install Python dependency
-/opt/tools/Exegol-history/venv/bin/pip install colorama
-
-# Add persistent alias in Exegol shell
-echo 'alias nxc="python3 /opt/tools/NetExec/nxc/nxcwrap.py"' >> ~/.zshrc
-source ~/.zshrc
-
-Edit : /root/.nxc/nxc.conf and add :
-[Exegol-History]
-scrap = True
+bash <(curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/install_nxcwraper.sh)
 
 ```
-
+## Installation my-ressources :
+```bash
+echo 'bash <(curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/install_nxcwraper.sh)' > ~/.exegol/my-resources/setup/load_user_setup.sh
 ---
 
 ## Usage
