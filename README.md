@@ -1,8 +1,8 @@
-# 🛠️ nxcwrap.py – NetExec Wrapper for Exegol-History
+# 🛠️ NetExec Wrapper for Exegol-History
 
 ## Description
 
-`nxcwrap.py` is a wrapper for NXC designed to be used **inside an Exegol container**.  
+Is a wrapper for NXC designed to be used **inside an Exegol container**.  
 It enhances your workflow by automatically syncing discovered credentials and hosts from NetExec into [Exegol-History](https://github.com/ThePorgs/Exegol-history).
 
 After executing any `nxc` command, it will:
