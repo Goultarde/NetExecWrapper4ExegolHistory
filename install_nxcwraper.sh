@@ -3,7 +3,7 @@ set -e
 
 pip install colorama >/dev/null 2>&1
 
-curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/nxcwrap.py -o /opt/tools/NetExec/nxc/nxcwrap.py
+curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/main/install_nxcwraper.sh -o /opt/tools/NetExec/nxc/nxcwrap.py
 chmod +x /opt/tools/NetExec/nxc/nxcwrap.py
 
 CONF_PATH="/root/.nxc/nxc.conf"
