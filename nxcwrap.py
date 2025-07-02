@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# By FrozenK for Exegol <3
 
 import sys
 import subprocess
