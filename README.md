@@ -23,6 +23,9 @@ bash <(curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/m
 echo 'bash <(curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/install_nxcwraper.sh)' > ~/.exegol/my-resources/setup/load_user_setup.sh
 ```
 
+## Demo :
+[![Demo](https://img.youtube.com/vi/Li9In64pfbQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=Li9In64pfbQ)
+
 ## Usage
 
 Run `nxc` as usual:
