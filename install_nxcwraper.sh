@@ -1,6 +1,4 @@
 #!/bin/bash
-set -e
-
 pip install colorama >/dev/null 2>&1
 
 wget -qO /opt/tools/NetExec/nxc/nxcwrap.py https://raw.githubusercontent.com/Frozenka/nxcwrap/main/nxcwrap.py
