@@ -4,12 +4,14 @@ import sys
 import subprocess
 import sqlite3
 import json
+import configparser
 from colorama import Fore, init
 
 init(autoreset=True)
 
 REAL_NXC = "nxc"
 NXC_DB = "/root/.nxc/workspaces/default/smb.db"
+NXC_CONF = "/root/.nxc/nxc.conf"
 PYTHON = "/opt/tools/Exegol-history/venv/bin/python3"
 EXEGOL = "/opt/tools/Exegol-history/exegol-history.py"
 
@@ -24,9 +26,21 @@ def extract_ntlm_hash(full_hash):
         return parts[1].lower().strip()
     return full_hash.lower().strip()
 
+def is_scrap_enabled():
+    config = configparser.ConfigParser()
+    try:
+        config.read(NXC_CONF)
+        return config.getboolean("Exegol-History", "scrap", fallback=False)
+    except Exception:
+        return False
+
 if len(sys.argv) < 2:
     print(Fore.RED + "[!] Usage: nxc <protocol> <options>")
     sys.exit(1)
+
+scrap_enabled = is_scrap_enabled()
+if scrap_enabled:
+    print(Fore.LIGHTBLACK_EX + "[i] Exegol-history sync is enabled")
 
 nxc_args = sys.argv[1:]
 nxc_cmd = [REAL_NXC] + nxc_args
@@ -44,12 +58,14 @@ if "-p" in nxc_args:
     except IndexError:
         pass
 
-# ✅ Affiche correctement la sortie de NXC
 try:
     retcode = subprocess.call(nxc_cmd)
 except Exception as e:
     print(Fore.RED + f"[!] Error running nxc: {e}")
     sys.exit(1)
+
+if not scrap_enabled:
+    sys.exit(retcode)
 
 existing_creds = set()
 try:
