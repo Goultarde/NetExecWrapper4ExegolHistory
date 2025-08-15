@@ -1,6 +1,7 @@
 #!/bin/bash
 pip install colorama >/dev/null 2>&1
 
+#cp nxcwrap.py /opt/tools/NetExec/nxc/nxcwrap.py
 wget -qO /opt/tools/NetExec/nxc/nxcwrap.py https://raw.githubusercontent.com/Frozenka/nxcwrap/main/nxcwrap.py
 chmod +x /opt/tools/NetExec/nxc/nxcwrap.py
 
@@ -14,8 +15,10 @@ else
 fi
 
 ALIAS_LINE="alias nxc=\"python3 /opt/tools/NetExec/nxc/nxcwrap.py\""
-if ! grep -Fxq "$ALIAS_LINE" /root/.bashrc; then
-    echo "$ALIAS_LINE" >> /root/.bashrc
+if ! grep -Fxq "$ALIAS_LINE" /root/.zshrc; then
+    echo "$ALIAS_LINE" >> /root/.zshrc
 fi
-alias disablenxcwrapper="sed -i 's/scrap *= *True/scrap = False/' /root/.nxc/nxc.conf"
-alias enablenxcwrapper="sed -i 's/scrap *= *False/scrap = True/' /root/.nxc/nxc.conf"
+if ! grep -Fq "disablenxcwrapper=" /root/.zshrc; then
+    echo 'alias disablenxcwrapper="sed -i '\''s/scrap *= *True/scrap = False/'\'' /root/.nxc/nxc.conf"' >> /root/.zshrc
+    echo 'alias enablenxcwrapper="sed -i '\''s/scrap *= *False/scrap = True/'\'' /root/.nxc/nxc.conf"' >> /root/.zshrc
+fi
