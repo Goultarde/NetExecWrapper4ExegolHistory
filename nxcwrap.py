@@ -13,7 +13,8 @@ init(autoreset=True)
 REAL_NXC = "nxc"
 NXC_DB = "/root/.nxc/workspaces/default/smb.db"
 NXC_CONF = "/root/.nxc/nxc.conf"
-PYTHON = "/opt/tools/Exegol-history/venv/bin/python3"
+#PYTHON = "/opt/tools/Exegol-history/venv/bin/python3"
+PYTHON = "/root/.local/share/pipx/venvs/exegol-history/bin/python"
 EXEGOL = "/opt/tools/Exegol-history/exegol-history.py"
 
 def clean_string(s):
