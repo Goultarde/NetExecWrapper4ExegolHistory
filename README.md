@@ -13,13 +13,13 @@ After executing any `nxc` command, it will:
 ---
 ## Installation (my-ressources) :
 ```bash
-echo 'curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/install_nxcwraper.sh | bash' >> ~/.exegol/my-resources/setup/load_user_setup.sh
+echo 'curl -sSL https://raw.githubusercontent.com/Goultarde/NetExecWrapper4ExegolHistory/refs/heads/main/install_nxcwraper.sh | bash' >> ~/.exegol/my-resources/setup/load_user_setup.sh
 ```
 
 ## Installation (inside Exegol) :
 
 ```bash
-bash <(curl -sSL https://raw.githubusercontent.com/Frozenka/nxcwrap/refs/heads/main/install_nxcwraper.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/Goultarde/NetExecWrapper4ExegolHistory/refs/heads/main/install_nxcwraper.sh)
 
 ```
 
